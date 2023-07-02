@@ -17,7 +17,7 @@ test:
 	poetry run pytest .
 
 test-coverage:
-	poetry run pytest --cov=gendif --cov-report=term-missing tests/
+	poetry run pytest --cov=gendif --cov-report=term-missing --cov-report xml tests/
 
 lint:
 	poetry run flake8 gendif
@@ -27,7 +27,7 @@ selfcheck:
 
 check: selfcheck test lint
 
-build:
+build: check
 	poetry build
 
 .PHONY: install test lint selfcheck check build
