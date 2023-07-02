@@ -16,4 +16,17 @@
 `gendiff <file_path1> <file_path2>`
 
 
+## Examples of the "Difference Calculator" script"
+
+---
+Comparing two flat files: JSON.
+
 [![asciicast](https://asciinema.org/a/qF07MWv0h96s1xFZ01DlfL9Fx.svg)](https://asciinema.org/a/qF07MWv0h96s1xFZ01DlfL9Fx)
+
+---
+
+A comparison of two flat files: YAML(YML).
+
+[![asciicast](https://asciinema.org/a/uRMRmq8TCT4PiqOwRRgVrhkUL.svg)](https://asciinema.org/a/uRMRmq8TCT4PiqOwRRgVrhkUL)
+
+---
