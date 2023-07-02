@@ -1,22 +1,27 @@
 import pytest
 import ast
+import os
 from gendif import generate_diff
 
 
-@pytest.fixture
+@pytest.fixture(scope='function')
 def expected_value():
-    with open('fixtures/expec_ans_flat_json.txt', 'r') as file:
+    file_path = 'tests/fixtures/expec_ans_flat_json.txt'
+    # file_path = os.path.join(os.getcwd(), 'fixtures/expec_ans_flat_json.txt')
+    with open(file_path, 'r') as file:
         content = file.read().strip()
         return ast.literal_eval(content)
 
 
-# @pytest.fixture
-# def export_file(file_name1, file_name2):
-#     with open(file_name1, 'r') as file1, open(file_name2, 'r') as file2:
-#         return file1.read().strip(), file2.read().strip()
-
-
 def test_json_flat(expected_value):
-    # f1, f2 = export_file('file1.json', 'file2.json')
-    result = generate_diff('fixtures/file1.json', 'fixtures/file2.json')
+    file_path1 = 'tests/fixtures/file1.json'
+    file_path2 = 'tests/fixtures/file2.json'
+    # file_path1 = os.path.join(os.getcwd(), 'fixtures/file1.json')
+    # file_path2 = os.path.join(os.getcwd(), 'fixtures/file2.json')
+    result = generate_diff(file_path1, file_path2)
     assert result == expected_value
+
+
+
+if __name__ == '__main__':
+    pytest.main()
