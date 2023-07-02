@@ -25,6 +25,7 @@ def generate_diff(file_path1: str,
         else:
             result.append(f"  {key}: {dictionary1[key]}")
 
-    for line in sorted(result, key=lambda x: x[2]):
-        print(line)
+    return sorted(result, key=lambda x: x[2])
+    # for line in sorted(result, key=lambda x: x[2]):
+    #     print(line)
     # return sorted(result, key=lambda x: x[2])
