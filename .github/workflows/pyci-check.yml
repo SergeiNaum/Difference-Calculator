@@ -28,7 +28,6 @@ jobs:
           make test
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v3.2.0
-
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.TEST_COVERAGE_Difference_Calculator }}
         with:
