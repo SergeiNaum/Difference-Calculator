@@ -9,6 +9,7 @@ packages = [{include = "gendif"}]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
+pytest-asyncio = "^0.21.0"
 
 
 [tool.poetry.group.dev.dependencies]

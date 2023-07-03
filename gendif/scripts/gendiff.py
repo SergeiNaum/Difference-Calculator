@@ -7,9 +7,7 @@ from gendif.cli import parsing_args
 
 def main():
     first_file, second_file, output_format = parsing_args()
-    for el in generate_diff(first_file, second_file):
-        print(el)
-    # print(generate_diff(first_file, second_file))
+    print(generate_diff(first_file, second_file, output_format))
 
 
 if __name__ == '__main__':
