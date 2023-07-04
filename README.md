@@ -30,3 +30,21 @@ A comparison of two flat files: YAML(YML).
 [![asciicast](https://asciinema.org/a/uRMRmq8TCT4PiqOwRRgVrhkUL.svg)](https://asciinema.org/a/uRMRmq8TCT4PiqOwRRgVrhkUL)
 
 ---
+
+Comparison of two files with recursive structure: YAML(YML) or JSON.
+
+[![asciicast](https://asciinema.org/a/8SbxTjyUrqwYUfJss1qYtXzYG.svg)](https://asciinema.org/a/8SbxTjyUrqwYUfJss1qYtXzYG)
+
+---
+
+Plain  format - compare two files with recursive YAML(YML) or JSON structure.
+
+[![asciicast](https://asciinema.org/a/9RlsUa63VMNphp8Y2LAfUNH5y.svg)](https://asciinema.org/a/9RlsUa63VMNphp8Y2LAfUNH5y)
+
+---
+
+Output the result of the comparison in JSON format.
+
+[![asciicast](https://asciinema.org/a/xtEJOuUuYO83ZiBD6FUfA5ecL.svg)](https://asciinema.org/a/xtEJOuUuYO83ZiBD6FUfA5ecL)
+
+---
