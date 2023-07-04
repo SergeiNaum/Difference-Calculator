@@ -1,7 +1,9 @@
 """fixtures"""
-import os
+
+
 import pathlib
 import asyncio
+import aiofiles
 import pytest
 
 
@@ -71,6 +73,6 @@ async def result_render(request):
     assert getattr(request.module, 'FORMATTER', None)
     result_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / request.module.FORMATTER
 
-    with open(result_path) as file:
-        content = file.read()
+    async with aiofiles.open(result_path, mode='r') as file:
+        content = await file.read()
     return content.replace('- wow:', '- wow: ')
