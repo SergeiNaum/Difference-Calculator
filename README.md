@@ -15,6 +15,9 @@
 
 `gendiff <file_path1> <file_path2>`
 
+**Running the script with the selection of the output format:** 
+
+`gendiff -f {stylish, plain, json} <file_path1> <file_path2>`
 
 ## Examples of the "Difference Calculator" script"
 
