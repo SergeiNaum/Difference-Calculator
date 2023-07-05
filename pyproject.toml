@@ -6,7 +6,7 @@ repository = 'https://github.com/SergeiNaum/python-project-50'
 authors = ["Naumenko_Sergey <sergei.naumencko@yandex.ru>"]
 license = "MIT License"
 readme = "README.md"
-packages = [{include = "gendif"}]
+packages = [{include = "gendiff"}]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
@@ -22,7 +22,7 @@ pytest-asyncio = "^0.21.0"
 
 
 [tool.poetry.scripts]
-gendiff = "gendif.scripts.gendiff:main"
+gendiff = "gendiff.scripts.gendiff:main"
 
 
 [build-system]

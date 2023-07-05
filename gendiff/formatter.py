@@ -1,6 +1,6 @@
 """Formatter module - formatting the tree with the selected formatter"""
 
-from gendif.formatters import format_stylish, format_plain, format_json
+from gendiff.formatters import format_stylish, format_plain, format_json
 
 
 def formatting(tree: dict, format_name='stylish') -> str:

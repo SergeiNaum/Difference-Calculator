@@ -1,9 +1,9 @@
 """Generate Diff - main module"""
 
 import pathlib
-from gendif.parcer import parce
-from gendif.tree import build_tree
-from gendif.formatter import formatting
+from gendiff.parcer import parce
+from gendiff.tree import build_tree
+from gendiff.formatter import formatting
 
 
 def get_file_ex(file_path: str) -> str:

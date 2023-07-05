@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Difference Generator."""
 
-from gendif import generate_diff
-from gendif.cli import parsing_args
+from gendiff import generate_diff
+from gendiff.cli import parsing_args
 
 
 def main():

@@ -1,7 +1,7 @@
 """Test plain formatter (for tree structure)"""
 
 import pytest
-from gendif import generate_diff
+from gendiff import generate_diff
 
 FORMATTER = 'plain'
 
