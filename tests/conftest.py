@@ -36,38 +36,62 @@ def file1_yml_path():
 
 @pytest.fixture(scope='session')
 def file2_yml_path():
-    file_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / 'file2.yml'
+    file_path = (
+            pathlib.Path(__file__).parent
+            / FIXTURES_FOLDER
+            / 'file2.yml'
+    )
     return file_path
 
 
 @pytest.fixture(scope='session')
 def file_tree1_json_path():
-    file_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / 'file1_tree.json'
+    file_path = (
+            pathlib.Path(__file__).parent
+            / FIXTURES_FOLDER
+            / 'file1_tree.json'
+    )
     return file_path
 
 
 @pytest.fixture(scope='session')
 def file_tree2_json_path():
-    file_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / 'file2_tree.json'
+    file_path = (
+            pathlib.Path(__file__).parent
+            / FIXTURES_FOLDER
+            / 'file2_tree.json'
+    )
     return file_path
 
 
 @pytest.fixture(scope='session')
 def file_tree1_yml_path():
-    file_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / 'file1_tree.yml'
+    file_path = (
+            pathlib.Path(__file__).parent
+            / FIXTURES_FOLDER
+            / 'file1_tree.yml'
+    )
     return file_path
 
 
 @pytest.fixture(scope='session')
 def file_tree2_yml_path():
-    file_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / 'file2_tree.yml'
+    file_path = (
+            pathlib.Path(__file__).parent
+            / FIXTURES_FOLDER
+            / 'file2_tree.yml'
+    )
     return file_path
 
 
 @pytest.fixture(scope='function')
 async def result_render(request):
     assert getattr(request.module, 'FORMATTER', None)
-    result_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / request.module.FORMATTER
+    result_path = (
+            pathlib.Path(__file__).parent
+            / FIXTURES_FOLDER
+            / request.module.FORMATTER
+    )
 
     async with aiofiles.open(result_path, mode='r') as file:
         content = await file.read()

@@ -38,10 +38,10 @@ def make_tree(dictionary1: dict, dictionary2: dict) -> list:
                 'value': child_1})
         else:
             result.append({
-                    'key': key,
-                    'type': 'changed',
-                    'old_value': child_1,
-                    'new_value': child_2})
+                'key': key,
+                'type': 'changed',
+                'old_value': child_1,
+                'new_value': child_2})
     return result
 
 
