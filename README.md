@@ -19,7 +19,7 @@
 
 `gendiff -f {stylish, plain, json} <file_path1> <file_path2>`
 
-## Examples of the "Difference Calculator" script"
+## Examples of the "Difference Calculator" script
 
 ---
 Comparing two flat files: JSON.
