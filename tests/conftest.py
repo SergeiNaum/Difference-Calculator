@@ -18,28 +18,40 @@ def event_loop():
 
 @pytest.fixture(scope='session')
 def file1_json_path():
-    file_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / 'file1.json'
+    file_path = (
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / 'file1.json'
+    )
     return file_path
 
 
 @pytest.fixture(scope='session')
 def file2_json_path():
-    file_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / 'file2.json'
+    file_path = (
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / 'file2.json'
+    )
     return file_path
 
 
 @pytest.fixture(scope='session')
 def file1_yml_path():
-    file_path = pathlib.Path(__file__).parent / FIXTURES_FOLDER / 'file1.yml'
+    file_path = (
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / 'file1.yml'
+    )
     return file_path
 
 
 @pytest.fixture(scope='session')
 def file2_yml_path():
     file_path = (
-            pathlib.Path(__file__).parent
-            / FIXTURES_FOLDER
-            / 'file2.yml'
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / 'file2.yml'
     )
     return file_path
 
@@ -47,9 +59,9 @@ def file2_yml_path():
 @pytest.fixture(scope='session')
 def file_tree1_json_path():
     file_path = (
-            pathlib.Path(__file__).parent
-            / FIXTURES_FOLDER
-            / 'file1_tree.json'
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / 'file1_tree.json'
     )
     return file_path
 
@@ -57,9 +69,9 @@ def file_tree1_json_path():
 @pytest.fixture(scope='session')
 def file_tree2_json_path():
     file_path = (
-            pathlib.Path(__file__).parent
-            / FIXTURES_FOLDER
-            / 'file2_tree.json'
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / 'file2_tree.json'
     )
     return file_path
 
@@ -67,9 +79,9 @@ def file_tree2_json_path():
 @pytest.fixture(scope='session')
 def file_tree1_yml_path():
     file_path = (
-            pathlib.Path(__file__).parent
-            / FIXTURES_FOLDER
-            / 'file1_tree.yml'
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / 'file1_tree.yml'
     )
     return file_path
 
@@ -77,9 +89,9 @@ def file_tree1_yml_path():
 @pytest.fixture(scope='session')
 def file_tree2_yml_path():
     file_path = (
-            pathlib.Path(__file__).parent
-            / FIXTURES_FOLDER
-            / 'file2_tree.yml'
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / 'file2_tree.yml'
     )
     return file_path
 
@@ -88,9 +100,9 @@ def file_tree2_yml_path():
 async def result_render(request):
     assert getattr(request.module, 'FORMATTER', None)
     result_path = (
-            pathlib.Path(__file__).parent
-            / FIXTURES_FOLDER
-            / request.module.FORMATTER
+        pathlib.Path(__file__).parent
+        / FIXTURES_FOLDER
+        / request.module.FORMATTER
     )
 
     async with aiofiles.open(result_path, mode='r') as file:
