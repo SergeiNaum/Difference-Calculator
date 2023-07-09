@@ -6,7 +6,10 @@ from gendiff.cli import parse_args
 
 
 def main():
-    first_file, second_file, output_format = parse_args()
+    args = parse_args()
+    first_file = args.first_file
+    second_file = args.second_file
+    output_format = args.format
     print(generate_diff(first_file, second_file, output_format))
 
 

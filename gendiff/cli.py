@@ -3,7 +3,7 @@
 import argparse
 
 
-def parsing_args():
+def parse_args():
     """Parsing args from user command line"""
     # Create an arguments parser object
     parser = argparse.ArgumentParser(prog='gendiff', description='Compares two\
@@ -18,4 +18,4 @@ def parsing_args():
 
     args = parser.parse_args()
 
-    return args.first_file, args.second_file, args.format
+    return args

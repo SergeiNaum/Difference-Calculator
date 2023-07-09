@@ -3,10 +3,12 @@ import json
 import yaml
 
 
-def parce(file_name, file_ex):
+def parse(file_name, file_ex):
     if file_ex == '.json':
-        return json.load(open(file_name))
+        with open(file_name) as file1:
+            return json.load(file1)
     if file_ex in ('.yaml', '.yml'):
-        return yaml.safe_load(open(file_name))
+        with open(file_name) as file2:
+            return yaml.safe_load(file2)
 
     raise ValueError('Unknown file format')
