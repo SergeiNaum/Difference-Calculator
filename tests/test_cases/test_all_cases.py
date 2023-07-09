@@ -28,9 +28,9 @@ async def result_render(request):
     file1, file2, format_name = request.param  # noqa: E501
 
     result_path = (
-                pathlib.Path(__file__).parent.parent
-                / FIXTURES_FOLDER
-                / format_name
+                    pathlib.Path(__file__).parent.parent
+                    / FIXTURES_FOLDER
+                    / format_name
     )
     async with aiofiles.open(result_path, mode='r') as file:
 
@@ -38,14 +38,14 @@ async def result_render(request):
         content = content.replace('- wow:', '- wow: ')
 
     file_path1 = (
-                pathlib.Path(__file__).parent.parent
-                / FIXTURES_FOLDER
-                / file1
+                    pathlib.Path(__file__).parent.parent
+                    / FIXTURES_FOLDER
+                    / file1
     )
     file_path2 = (
-                pathlib.Path(__file__).parent.parent
-                / FIXTURES_FOLDER
-                / file2
+                    pathlib.Path(__file__).parent.parent
+                    / FIXTURES_FOLDER
+                    / file2
     )
 
     return content, format_name, file_path1, file_path2
