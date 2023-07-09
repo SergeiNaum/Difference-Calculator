@@ -28,9 +28,9 @@ async def result_render(request):
     file1, file2, format_name = request.param  # noqa: E501
 
     result_path = (
-                    pathlib.Path(__file__).parent.parent
-                    / FIXTURES_FOLDER
-                    / format_name
+                    pathlib.Path(__file__).parent.parent  # noqa:E126
+                    / FIXTURES_FOLDER  # noqa:E126
+                    / format_name  # noqa:E126
     )
     async with aiofiles.open(result_path, mode='r') as file:
 
