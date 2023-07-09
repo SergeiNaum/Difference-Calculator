@@ -38,14 +38,14 @@ async def result_render(request):
         content = content.replace('- wow:', '- wow: ')
 
     file_path1 = (
-                    pathlib.Path(__file__).parent.parent
-                    / FIXTURES_FOLDER
-                    / file1
+                    pathlib.Path(__file__).parent.parent  # noqa:E126
+                    / FIXTURES_FOLDER  # noqa:E126
+                    / file1  # noqa:E126
     )
     file_path2 = (
-                    pathlib.Path(__file__).parent.parent
-                    / FIXTURES_FOLDER
-                    / file2
+                    pathlib.Path(__file__).parent.parent  # noqa:E126
+                    / FIXTURES_FOLDER  # noqa:E126
+                    / file2  # noqa:E126
     )
 
     return content, format_name, file_path1, file_path2
