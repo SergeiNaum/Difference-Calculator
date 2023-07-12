@@ -1,7 +1,7 @@
 """Generate Diff - main module"""
 
 import pathlib
-from gendiff.parcer import parse
+from gendiff.parser import parse
 from gendiff.tree import build_tree
 from gendiff.formatter import format
 
