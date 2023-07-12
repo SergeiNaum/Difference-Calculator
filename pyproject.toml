@@ -10,7 +10,7 @@ classifiers = [
         'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 3.8',
         'License :: OSI Approved :: BSD License',
-        'Operating System :: OS Linux',
+        'Operating System :: POSIX :: Linux',
     ]
 
 packages = [{include = "gendiff"}]
@@ -29,7 +29,7 @@ pytest-asyncio = "^0.21.0"
 
 
 [tool.poetry.scripts]
-gendiff = "gendiff.scripts.gendif:main"
+gendiff = "gendiff.scripts.gendiff:main"
 
 
 [build-system]
