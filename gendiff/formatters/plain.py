@@ -28,18 +28,18 @@ def iter_(node: dict, path='') -> str:
         return result
 
     if node['type'] == 'removed':
-        return f'Property "{current_path}" was removed'
+        return f"Property '{current_path}' was removed"
 
     if node['type'] == 'added':
         formatted_value = to_string(node.get('value'))
-        return f'Property "{current_path}" was added ' \
-               f'with value: {formatted_value}'
+        return f"Property '{current_path}' was added " \
+               f"with value: {formatted_value}"
 
     if node['type'] == 'changed':
         formatted_old_value = to_string(node.get('old_value'))
         formatted_new_value = to_string(node.get('new_value'))
-        return f'Property "{current_path}" was updated. ' \
-               f'From {formatted_old_value} to {formatted_new_value}'
+        return f"Property '{current_path}' was updated. " \
+               f"From {formatted_old_value} to {formatted_new_value}"
 
 
 def format_(node: dict):
