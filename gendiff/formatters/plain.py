@@ -10,7 +10,7 @@ def to_string(value):
         return value
     if value is None:
         return 'null'
-    return f'"{value}"'
+    return f"'{value}'"
 
 
 def iter_(node: dict, path='') -> str:
