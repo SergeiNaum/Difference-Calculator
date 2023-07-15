@@ -8,7 +8,7 @@
 
 ## Installation and first start
 
-```clone game from repository``` - git clone git@github.com:SergeiNaum/python-project-50.git
+```clone from repository``` - git clone git@github.com:SergeiNaum/python-project-50.git
 
 ```installing dependencies``` - make install
 
