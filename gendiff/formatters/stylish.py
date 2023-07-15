@@ -1,10 +1,12 @@
 """Stylish module - apply stylish view to diff (by default)"""
 
 INDENT_SIZE = 4
+OFFSET = INDENT_SIZE // 2
 
 
-def get_indent(depth: int) -> str:
-    return ' ' * (depth * INDENT_SIZE - 2)
+def get_indent(depth: int, offset: int = OFFSET) -> str:
+    indent = (depth * INDENT_SIZE - offset)
+    return ' ' * indent
 
 
 def to_string(value, depth: int) -> str:
@@ -36,9 +38,10 @@ def get_root_node(node, depth):
 def get_nested_node(node, depth):
     children = node.get('children')
     indent = get_indent(depth)
+    closing_indent = get_indent(depth)
     lines = map(lambda child: iter_(child, depth + 1), children)
     result = '\n'.join(lines)
-    return f'{indent}  {node["key"]}: {{\n{result}\n  {indent}}}'
+    return f'{indent}  {node["key"]}: {{\n{result}\n  {closing_indent}}}'
 
 
 def get_changed_node(node, depth):

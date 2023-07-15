@@ -4,6 +4,21 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/23a0e81a5da278e1a0b9/test_coverage)](https://codeclimate.com/github/SergeiNaum/python-project-50/test_coverage)
 [![.github/workflows/pyci-check.yml](https://github.com/SergeiNaum/python-project-50/actions/workflows/pyci-check.yml/badge.svg)](https://github.com/SergeiNaum/python-project-50/actions/workflows/pyci-check.yml)
 
+---
+
+## Installation and first start
+
+```clone game from repository``` - git clone git@github.com:SergeiNaum/python-project-50.git
+
+```installing dependencies``` - make install
+
+```build``` - make build
+
+```install package``` - make package-install
+
+```uninstall package``` - make package-uninstall
+
+---
 
 ## Instructions
 

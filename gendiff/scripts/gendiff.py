@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Difference Generator."""
 
-from gendiff.gendif import generate_diff
+from gendiff.gendiff import generate_diff
 from gendiff.cli import parse_args
 
 

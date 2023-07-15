@@ -3,7 +3,7 @@ import pathlib
 import aiofiles
 import asyncio
 
-from gendiff.gendif import generate_diff
+from gendiff.gendiff import generate_diff
 from gendiff.formatter import format
 
 FIXTURES_FOLDER = 'fixtures'
