@@ -4,9 +4,8 @@ INDENT_SIZE = 4
 OFFSET = INDENT_SIZE // 2
 
 
-def get_indent(depth: int, offset: int = OFFSET) -> str:
-    indent = (depth * INDENT_SIZE - offset)
-    return ' ' * indent
+def get_indent(depth: int, indent_size: int = INDENT_SIZE) -> str:
+    return ' ' * (depth * indent_size - OFFSET)
 
 
 def to_string(value, depth: int) -> str:
@@ -18,7 +17,7 @@ def to_string(value, depth: int) -> str:
 
     if isinstance(value, dict):
         indent = get_indent(depth)
-        current_indent = indent + (" " * 6)
+        current_indent = indent + (" " * (INDENT_SIZE + OFFSET))
         lines = []
         for k, v in value.items():
             lines.append(f'{current_indent}{k}: {to_string(v, depth + 1)}')
@@ -37,15 +36,14 @@ def get_root_node(node, depth):
 
 def get_nested_node(node, depth):
     children = node.get('children')
-    indent = get_indent(depth)
-    closing_indent = get_indent(depth)
+    indent = get_indent(depth, indent_size=INDENT_SIZE)
     lines = map(lambda child: iter_(child, depth + 1), children)
     result = '\n'.join(lines)
-    return f'{indent}  {node["key"]}: {{\n{result}\n  {closing_indent}}}'
+    return f'{indent}  {node["key"]}: {{\n{result}\n  {indent}}}'
 
 
 def get_changed_node(node, depth):
-    indent = get_indent(depth)
+    indent = get_indent(depth, indent_size=INDENT_SIZE)
     formatted_value1 = to_string(node.get('old_value'), depth)
     formatted_value2 = to_string(node.get('new_value'), depth)
     line1 = f'{indent}- {node["key"]}: {formatted_value1}\n'
@@ -56,19 +54,19 @@ def get_changed_node(node, depth):
 
 def get_unchanged_node(node, depth):
     formatted_value = to_string(node.get('value'), depth)
-    indent = get_indent(depth)
+    indent = get_indent(depth, indent_size=INDENT_SIZE)
     return f'{indent}  {node["key"]}: {formatted_value}'
 
 
 def get_removed_node(node, depth):
     formatted_value = to_string(node.get('value'), depth)
-    indent = get_indent(depth)
+    indent = get_indent(depth, indent_size=INDENT_SIZE)
     return f'{indent}- {node["key"]}: {formatted_value}'
 
 
 def get_added_node(node, depth):
     formatted_value = to_string(node.get('value'), depth)
-    indent = get_indent(depth)
+    indent = get_indent(depth, indent_size=INDENT_SIZE)
     return f'{indent}+ {node["key"]}: {formatted_value}'
 
 
