@@ -1,11 +1,11 @@
 """Stylish module - apply stylish view to diff (by default)"""
 
 INDENT_SIZE = 4
-OFFSET = INDENT_SIZE // 2
+
 
 
 def get_indent(depth: int, indent_size: int = INDENT_SIZE) -> str:
-    return ' ' * (depth * indent_size - OFFSET)
+    return ' ' * (depth * indent_size - 2)
 
 
 def to_string(value, depth: int) -> str:
@@ -17,7 +17,7 @@ def to_string(value, depth: int) -> str:
 
     if isinstance(value, dict):
         indent = get_indent(depth)
-        current_indent = indent + (" " * (INDENT_SIZE + OFFSET))
+        current_indent = indent + (" " * (INDENT_SIZE + 2))
         lines = []
         for k, v in value.items():
             lines.append(f'{current_indent}{k}: {to_string(v, depth + 1)}')
