@@ -3,7 +3,6 @@
 INDENT_SIZE = 4
 
 
-
 def get_indent(depth: int, indent_size: int = INDENT_SIZE) -> str:
     return ' ' * (depth * indent_size - 2)
 
